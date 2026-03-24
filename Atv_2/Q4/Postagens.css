@@ -1,0 +1,162 @@
+body {
+    background-color: #a4a993; /* Cor de fundo esverdeada/cinza */
+    font-family: 'Tilt Neon', sans-serif;
+    margin: 10px;
+    padding: 0;
+    color: #002b36; /* Cor do texto principal */
+}
+
+h1 {
+    background-color: #002b36; /* Fundo do título principal */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #025E73; /* Azul petróleo para os títulos dos posts */
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.autor {
+    background-color: #BFB78F; /* Faixa levemente diferente para o rodapé do post */
+    padding: 5px;
+    text-align: right;
+    font-size: 0.9rem;
+    font-style: italic;
+    border-top: 1px solid #949981; /* Linha sutil separando o autor */
+}
+
+.separador {
+    text-align: center;
+    color: #025E73;
+    margin: 30px 0;
+    font-size: 1.2rem;
+}
+
+.exemplo-fonte {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400; /* Normal */
+}
+
+.p1 { 
+    font-weight: 700; /* Negrito */
+}
+
+.p2 { 
+    font-weight: 900; /* Extra Negrito */
+}
+
+.exemplo-inclinacao {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+}
+
+.p3 { 
+    font-style: oblique 10deg; 
+}
+
+.p4 { 
+    font-style: oblique 20deg; 
+}
+
+.img-teste {
+width: 300px;
+}
+
+/* =========================
+ESTILIZAÇÃO DA LISTA (ol)
+========================= */
+/* Define a cor do texto da lista */
+ol {
+color: #e5e7eb;
+/* Faz o número aparecer dentro do bloco do item */
+list-style-position: inside;
+/* Limita a largura da lista */
+max-width: 400px;
+
+/* Centraliza a lista horizontalmente */
+margin: auto;
+}
+/* =========================
+ESTILIZAÇÃO DOS ITENS (li)
+========================= */
+li {
+/* Cor de fundo dos itens */
+background: #374151;
+/* Arredondamento das bordas */
+border-radius: 12px;
+/* Espaçamento interno (respiro do conteúdo) */
+padding: 14px 18px;
+/* Espaçamento entre os itens */
+margin: 12px 0;
+/* Suaviza mudanças visuais (hover, movimento, etc.) */
+transition: 0.2s;
+}
+/* =========================
+EFEITO AO PASSAR O MOUSE
+========================= */
+li:hover {
+/* Move levemente o item para a direita */
+transform: translateX(6px);
+/* Clareia um pouco o fundo */
+background: #4b5563;
+}
+/* =========================
+DESTAQUE DO PRIMEIRO ITEM
+========================= */
+/*
+Passo 1: li → seleciona todos os itens
+Passo 2: :first-child → pega apenas o primeiro item
+Passo 3: ::before → cria um conteúdo antes do texto
+*/
+li:first-child::before {
+/* Insere o emoji antes do conteúdo do primeiro item */
+content: "🏆 ";
+}
+
+/* Container da lista de estudos */
+.lista-estudos {
+    max-width: 600px;
+    margin: 20px auto;
+    color: #1a1a1a;
+}
+
+/* Item principal (o Card) */
+.lista-estudos > li {
+    background: #9499c5; /* Cor roxa clara da imagem */
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 4px 4px 0px #6a6fa3; /* Sombra sólida para efeito 3D */
+    list-style-position: outside;
+    font-weight: bold;
+}
+
+/* Lista interna (subitens) */
+.lista-estudos ul {
+    list-style-type: none; /* Remove as bolinhas padrão */
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.lista-estudos ul li {
+    font-weight: normal;
+    background: transparent; /* Remove o fundo escuro das bebidas */
+    padding: 5px 0;
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+/* Adicionando o ícone de alvo/check antes dos subitens */
+.lista-estudos ul li::before {
+    content: "🎯 ";
+    font-size: 0.8rem;
+    margin-right: 8px;
+}
